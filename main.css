@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    height: 100%;
+}
+
+html, body {
+    margin: 0;
+    font-family: Roboto, Arial sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #007ACC;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    flex: 1 0 5%;
+    z-index: 2;
+}
+
+nav .logo-short {
+    float: left;
+    height: 2.1rem;
+    width: auto;
+    padding-right: 6px;
+}
+
+nav .logo-long {
+    display: none;
+    height: 2rem;
+    padding: 6px 16px 4px 16px;
+}
+
+nav div a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: white;
+    color: #007ACC;
+}
+
+nav a:active, .active {
+    background-color: #00273F;
+    color: white;
+}
+
+.display-container {
+    /*background-color: #00273F;*/
+    background-image: linear-gradient(to bottom right, #00273F, #007ACC);
+    padding: 5px 20px 20px 20px;
+    overflow: hidden;
+}
+
+.display-container h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.display-container ul {
+    color: lightsteelblue;
+    font-size: 1.4rem;
+}
+
+li {
+    transition: .3s;
+    list-style: square;
+}
+
+li:hover {
+    transform: translateX(20px);
+    color: white;
+}
+
+.display-container span {
+    color: lightsteelblue;
+}
+
+.display-container a {
+    color: white;
+    font-size: x-large;
+    background-color: #007ACC;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.display-container a:hover {
+    background-color: #005a94;
+}
+
+.display-container span {
+    font-size: 3rem;
+}
+
+span#left:hover, span#right:hover {
+    cursor: pointer;
+}
+
+span#left, span#right {
+    padding: 0 5px;
+    transition: .3s;
+}
+
+span#left:hover {
+    padding-left: 0;
+    padding-right: 10px;
+}
+ span#right:hover {
+     padding-right: 0;
+ }
+span#left {
+    float: left;
+}
+
+span#content {
+    text-align: center;
+    position: relative;
+    top: 7px;
+}
+
+span#right {
+    float: right;
+}
+
+main {
+    margin-top: 47px;
+    flex: 2 0 80%;
+}
+
+.table-container, .detail-container {
+    overflow-x: auto;
+    padding: 0 20px 20px 20px;
+    /*height: 100%;*/
+}
+
+th {
+    text-align: left;
+    vertical-align: center;
+    padding: 20px 0 10px 20px;
+}
+
+th img, .logo-long {
+    filter: invert(100%) sepia(0%) saturate(1316%) hue-rotate(286deg) brightness(99%) contrast(106%);
+    width: 8rem;
+}
+
+td {
+    padding: 0 20px 10px 30px;
+    vertical-align: top;
+    width: 33.3%;
+    position: relative;
+    transition: .3s;
+    opacity: .9;
+}
+
+td a {
+    text-decoration: none;
+    color: white;
+}
+
+td img {
+    width: 100%;
+    height: auto;
+}
+
+.quotation:before {
+    content: "\201C";
+    color: #CCD6DE;
+    font-size: 7.5em;
+    font-weight: 700;
+    opacity: 0.3;
+    position: absolute;
+    top: -0.15em;
+    left: -0.01em;
+    text-shadow: none;
+}
+
+table {
+    /*border-collapse: collapse;*/
+}
+
+td:hover {
+    opacity: 1;
+}
+
+td[class*="col"] {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.airbnb {
+    background-color: #6F0808;
+}
+
+.slack {
+    background-color: #4E086F;
+}
+
+.google {
+    background-color: #086F56;
+}
+
+footer {
+    text-align: center;
+    background-color: #007ACC;
+    color: white;
+    padding: 10px 0;
+    flex: 1 0 15%
+}
+
+@media screen and (max-width: 470px) {
+    nav div a {
+        clear: both;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    nav .logo-short {
+        /*padding-bottom: 13px;*/
+        display: none;
+    }
+
+    nav .logo-long {
+        display: inherit;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    main {
+        margin-top: 128px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    td {
+        min-width: 350px;
+    }
+}
+
+/* I hope you don't have a wide monitor */
