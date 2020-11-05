@@ -7,6 +7,8 @@ html {
 html, body {
     margin: 0;
     font-family: Roboto, Arial sans-serif;
+    min-height: 100%;
+    width: auto;
 }
 
 body {
@@ -60,6 +62,9 @@ nav a:active, .active {
 
 .display-container {
     /*background-color: #00273F;*/
+    color: lightsteelblue;
+    font-size: 1.4rem;
+    text-decoration: none;
     background-image: linear-gradient(to bottom right, #00273F, #007ACC);
     padding: 5px 20px 20px 20px;
     overflow: hidden;
@@ -71,9 +76,8 @@ nav a:active, .active {
     margin-bottom: 10px;
 }
 
-.display-container ul {
-    color: lightsteelblue;
-    font-size: 1.4rem;
+.display-container ul, .display-container a {
+    text-decoration: inherit;
 }
 
 li {
@@ -81,60 +85,46 @@ li {
     list-style: square;
 }
 
-li:hover {
+.display-container li:hover {
     transform: translateX(20px);
     color: white;
 }
 
-.display-container span {
+.display-container li a {
+    color: inherit;
+}
+
+span.left, span.right, span.content {
+    padding: 0 5px;
+    transition: .3s;
+    font-size: 3rem;
     color: lightsteelblue;
 }
 
-.display-container a {
-    color: white;
-    font-size: x-large;
-    background-color: #007ACC;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.display-container a:hover {
-    background-color: #005a94;
-}
-
-.display-container span {
-    font-size: 3rem;
-}
-
-span#left:hover, span#right:hover {
+span.left:hover, span.right:hover {
     cursor: pointer;
 }
 
-span#left, span#right {
-    padding: 0 5px;
-    transition: .3s;
-}
-
-span#left:hover {
+span.left:hover {
     padding-left: 0;
     padding-right: 10px;
 }
- span#right:hover {
-     padding-right: 0;
- }
-span#left {
+
+span.right:hover {
+    padding-right: 0;
+}
+
+span.left {
     float: left;
 }
 
-span#content {
+span.content {
     text-align: center;
     position: relative;
     top: 7px;
 }
 
-span#right {
+span.right {
     float: right;
 }
 
@@ -143,11 +133,52 @@ main {
     flex: 2 0 80%;
 }
 
-.table-container, .detail-container {
+.table-container {
     overflow-x: auto;
-    padding: 0 20px 20px 20px;
-    /*height: 100%;*/
+    padding: 0 20px 50px 20px;
 }
+
+.detail-container {
+    position: relative;
+    padding: 0 50px;
+    background: #222428;
+}
+
+.detail-container span.left,
+.detail-container span.right {
+    color: #CACACA;
+    position: absolute;
+    top: 42%;
+}
+
+.detail-container span.left {
+    left: 5px;
+    float: left;
+}
+
+.detail-container span.right {
+    right: 5px;
+    float: right;
+}
+
+.detail-container img.responsive {
+    /*float: left;*/
+}
+
+img.responsive {
+    min-width: 1000px;
+    max-width: 100%;
+    height: auto;
+}
+
+.detail-container img {
+    display: none;
+}
+
+img.visible {
+    display: initial;
+}
+
 
 th {
     text-align: left;
@@ -218,10 +249,12 @@ td[class*="col"] {
 
 footer {
     text-align: center;
+    min-width: 100%;
+    height: fit-content;
     background-color: #007ACC;
     color: white;
     padding: 10px 0;
-    flex: 1 0 15%
+    flex: 0 0 15%
 }
 
 @media screen and (max-width: 470px) {
@@ -243,7 +276,7 @@ footer {
     }
 
     main {
-        margin-top: 128px;
+        margin-top: 183px;
     }
 }
 
