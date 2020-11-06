@@ -9,6 +9,7 @@ html, body {
     font-family: Roboto, Arial sans-serif;
     min-height: 100%;
     width: auto;
+    background-color: #222428;
 }
 
 body {
@@ -61,7 +62,6 @@ nav a:active, .active {
 }
 
 .display-container {
-    /*background-color: #00273F;*/
     color: lightsteelblue;
     font-size: 1.4rem;
     text-decoration: none;
@@ -83,7 +83,6 @@ nav a:active, .active {
 .display-container a {
     color: white;
     font-size: inherit;
-    /*font-weight: boldgccer;*/
 }
 
 .display-container a:hover {
@@ -95,6 +94,10 @@ li {
     list-style: square;
 }
 
+.display-container li {
+    line-height: 2rem;
+}
+
 .display-container li:hover {
     transform: translateX(20px);
     color: white;
@@ -102,6 +105,15 @@ li {
 
 .display-container li a {
     color: inherit;
+}
+
+.display-container#costs {
+    flex: 2 0 auto;
+}
+
+.display-container#costs li {
+    font-size: 2rem;
+    line-height: 5rem;
 }
 
 span.left, span.right, span.content {
@@ -148,6 +160,11 @@ main {
 .table-container {
     overflow-x: auto;
     padding: 0 20px 50px 20px;
+    background-color: #222428;
+}
+
+.table-container h2 {
+    color: white;
 }
 
 .detail-container {
@@ -161,8 +178,9 @@ main {
 .detail-container span.left,
 .detail-container span.right {
     color: white;
-    position: absolute;
-    top: 45%;
+    position: fixed;
+    /*position: sticky;*/
+    top: 52%;
 }
 
 .detail-container span.left {
@@ -193,7 +211,6 @@ img.responsive {
 img.visible {
     display: block;
 }
-
 
 th {
     text-align: left;
@@ -235,10 +252,6 @@ td img {
     top: -0.15em;
     left: -0.01em;
     text-shadow: none;
-}
-
-table {
-    /*border-collapse: collapse;*/
 }
 
 td:hover {
@@ -295,10 +308,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 890px) {
     td {
         min-width: 350px;
     }
 }
-
-/* I hope you don't have a wide monitor */
