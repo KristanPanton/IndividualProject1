@@ -80,6 +80,16 @@ nav a:active, .active {
     text-decoration: inherit;
 }
 
+.display-container a {
+    color: white;
+    font-size: inherit;
+    /*font-weight: boldgccer;*/
+}
+
+.display-container a:hover {
+    text-decoration: underline;
+}
+
 li {
     transition: .3s;
     list-style: square;
@@ -130,7 +140,9 @@ span.right {
 
 main {
     margin-top: 47px;
-    flex: 2 0 80%;
+    flex: 2 1 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 .table-container {
@@ -142,13 +154,15 @@ main {
     position: relative;
     padding: 0 50px;
     background: #222428;
+    overflow-x: auto;
+    flex: 2 0 auto;
 }
 
 .detail-container span.left,
 .detail-container span.right {
-    color: #CACACA;
+    color: white;
     position: absolute;
-    top: 42%;
+    top: 45%;
 }
 
 .detail-container span.left {
@@ -162,7 +176,8 @@ main {
 }
 
 .detail-container img.responsive {
-    /*float: left;*/
+    max-width: 1400px;
+    margin: auto;
 }
 
 img.responsive {
@@ -176,7 +191,7 @@ img.responsive {
 }
 
 img.visible {
-    display: initial;
+    display: block;
 }
 
 
