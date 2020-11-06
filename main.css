@@ -6,7 +6,7 @@ html {
 
 html, body {
     margin: 0;
-    font-family: Roboto, Arial sans-serif;
+    font-family: Roboto, sans-serif;
     min-height: 100%;
     width: auto;
     background-color: #222428;
@@ -152,7 +152,8 @@ span.right {
 
 main {
     margin-top: 47px;
-    flex: 2 1 80%;
+    height: auto;
+    flex: 2 1 auto;
     display: flex;
     flex-direction: column;
 }
@@ -180,7 +181,7 @@ main {
     color: white;
     position: fixed;
     /*position: sticky;*/
-    top: 52%;
+    top: 50%;
 }
 
 .detail-container span.left {
@@ -194,7 +195,7 @@ main {
 }
 
 .detail-container img.responsive {
-    max-width: 1400px;
+    max-width: 95%;
     margin: auto;
 }
 
@@ -264,15 +265,19 @@ td[class*="col"] {
 }
 
 .airbnb {
-    background-color: #6F0808;
+    background-color: #4E086F;
 }
 
 .slack {
-    background-color: #4E086F;
+    background-color: #6F0808;
 }
 
 .google {
     background-color: #086F56;
+}
+
+iframe {
+    flex: 2 0 auto;
 }
 
 footer {
@@ -285,7 +290,12 @@ footer {
     flex: 0 0 15%
 }
 
-@media screen and (max-width: 470px) {
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 540px) {
     nav div a {
         clear: both;
         width: 100%;
@@ -308,8 +318,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 980px) {
     td {
-        min-width: 350px;
+        min-width: 255px;
     }
 }
