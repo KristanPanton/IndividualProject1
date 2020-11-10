@@ -243,6 +243,7 @@ td img {
     height: auto;
 }
 
+/* Places quote in table */
 .quotation:before {
     content: "\201C";
     color: #CCD6DE;
@@ -259,6 +260,7 @@ td:hover {
     opacity: 1;
 }
 
+/* Themes all the columns in the table in index.html */
 td[class*="col"] {
     color: white;
     font-size: 1.2rem;
@@ -295,6 +297,7 @@ footer a {
     color: white;
 }
 
+/* Makes navbar responsive and changes navbar logo when the screen is small enough*/
 @media screen and (max-width: 540px) {
     nav div a {
         clear: both;
@@ -303,7 +306,6 @@ footer a {
     }
 
     nav .logo-short {
-        /*padding-bottom: 13px;*/
         display: none;
     }
 
